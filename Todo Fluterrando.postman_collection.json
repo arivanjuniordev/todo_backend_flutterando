@@ -12,12 +12,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/api/todos",
-					"protocol": "http",
+					"raw": "https://todo-backend-flutterando.onrender.com/api/todos",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"todo-backend-flutterando",
+						"onrender",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"todos"
@@ -32,12 +33,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/api/todos/1",
-					"protocol": "http",
+					"raw": "https://todo-backend-flutterando.onrender.com/api/todos/1",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"todo-backend-flutterando",
+						"onrender",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"todos",
@@ -62,12 +64,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/todos",
-					"protocol": "http",
+					"raw": "https://todo-backend-flutterando.onrender.com/api/todos",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"todo-backend-flutterando",
+						"onrender",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"todos"
@@ -82,14 +85,14 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/api/todos/1",
-					"protocol": "http",
+					"raw": "https://todo-backend-flutterando.onrender.comapi/todos/1",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"todo-backend-flutterando",
+						"onrender",
+						"comapi"
 					],
-					"port": "8080",
 					"path": [
-						"api",
 						"todos",
 						"1"
 					]
@@ -112,12 +115,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/todos",
-					"protocol": "http",
+					"raw": "https://todo-backend-flutterando.onrender.com/api/todos",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"todo-backend-flutterando",
+						"onrender",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"todos"
