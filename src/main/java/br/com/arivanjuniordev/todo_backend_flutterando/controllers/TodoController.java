@@ -19,23 +19,23 @@ public class TodoController {
             return ResponseEntity.ok(todoService.getAll());
         }
 
-        @GetMapping
-        public ResponseEntity<TodoDto> getById(Long id) {
+        @GetMapping("/{id}")
+        public ResponseEntity<TodoDto> getById(@PathVariable Long id) {
             return ResponseEntity.ok(todoService.getById(id));
         }
 
         @PostMapping
-        public ResponseEntity<TodoDto> save(TodoDto todoDto) {
+        public ResponseEntity<TodoDto> save(@RequestBody TodoDto todoDto) {
             return ResponseEntity.ok(todoService.save(todoDto));
         }
 
         @PutMapping
-        public ResponseEntity<TodoDto> update(TodoDto todoDto) {
+        public ResponseEntity<TodoDto> update(@RequestBody TodoDto todoDto) {
             return ResponseEntity.ok(todoService.update(todoDto));
         }
 
-        @DeleteMapping
-        public ResponseEntity<Void> delete(Long id) {
+        @DeleteMapping("/{id}")
+        public ResponseEntity<Void> delete(@PathVariable Long id) {
             todoService.delete(id);
             return ResponseEntity.ok().build();
         }

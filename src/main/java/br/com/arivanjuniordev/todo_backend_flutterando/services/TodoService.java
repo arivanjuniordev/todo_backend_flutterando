@@ -1,6 +1,7 @@
 package br.com.arivanjuniordev.todo_backend_flutterando.services;
 
 import br.com.arivanjuniordev.todo_backend_flutterando.adapter.TodoAdapter;
+import br.com.arivanjuniordev.todo_backend_flutterando.domain.Todo;
 import br.com.arivanjuniordev.todo_backend_flutterando.dtos.TodoDto;
 import br.com.arivanjuniordev.todo_backend_flutterando.repositories.TodoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,7 +31,13 @@ public class TodoService {
     }
 
     public TodoDto update(TodoDto todoDto) {
-        return TodoAdapter.toDto(todoRepository.save(TodoAdapter.toEntity(todoDto)));
+         Todo todo = todoRepository.findById(todoDto.id()).get();
+         todo.setTitle(todoDto.title());
+         todo.setDone(todoDto.done());
+
+         todoRepository.save(todo);
+
+        return TodoAdapter.toDto(todo);
     }
 
     public TodoDto getById(Long id) {
